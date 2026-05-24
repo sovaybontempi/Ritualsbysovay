@@ -1,0 +1,134 @@
+/* =============================================================
+   post-styles.css — Rituals by Sovay
+   Additional styles for grimoire post pages.
+   ============================================================= */
+
+.post-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-mid);
+  padding: 3.5rem var(--section-pad-h) 2.5rem;
+}
+.post-header-inner { max-width: 760px; }
+
+.post-back {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-body); font-size: 0.78rem; font-style: italic;
+  color: var(--text-dim); letter-spacing: 0.08em;
+  margin-bottom: 1.75rem; transition: color 0.2s;
+}
+.post-back:hover { color: var(--forest4); }
+
+.post-eyebrow {
+  font-family: var(--font-body); font-size: 0.7rem; font-style: italic;
+  color: var(--forest4); letter-spacing: 0.16em;
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.post-eyebrow::before { content: '✦'; font-size: 0.45rem; color: var(--forest2); font-style: normal; }
+
+.post-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400; font-style: italic;
+  line-height: 1.1; color: var(--text);
+  margin-bottom: 1.1rem; letter-spacing: 0.01em;
+}
+
+.post-meta {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-family: var(--font-body); font-size: 0.78rem; font-style: italic; color: var(--text-dim);
+}
+.post-dot { color: var(--border-hi); }
+.post-category {
+  color: var(--wine2); font-style: italic; font-size: 0.72rem;
+  letter-spacing: 0.08em; font-family: var(--font-body);
+}
+
+
+/* --- POST HERO IMAGE --- */
+.post-image-wrap { width: 100%; border-bottom: 1px solid var(--border-mid); overflow: hidden; max-height: 520px; }
+.post-image-wrap img { width: 100%; object-fit: cover; display: block; filter: saturate(0.7) brightness(0.85); }
+
+
+/* --- POST BODY --- */
+.post-body { padding: 4rem var(--section-pad-h) 3rem; }
+.post-body-inner { max-width: 680px; }
+
+.post-body p {
+  font-family: var(--font-body); font-size: 1.12rem; font-style: italic;
+  color: var(--text-mid); line-height: 1.95; margin-bottom: 1.5rem; font-weight: 300;
+}
+
+.post-body h2 {
+  font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; font-style: italic;
+  color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: 0.01em;
+  padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-mid);
+}
+
+.post-body h3 {
+  font-family: var(--font-display); font-size: 1.2rem; font-weight: 400; font-style: italic;
+  color: var(--text-mid); margin-top: 2rem; margin-bottom: 0.75rem;
+}
+
+/* Materials list */
+.materials-list { list-style: none; padding: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.materials-list li {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  font-family: var(--font-body); font-size: 1rem; font-style: italic;
+  color: var(--text-mid); line-height: 1.65; font-weight: 300;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-card);
+}
+.materials-list li::before { content: '✦'; color: var(--forest3); font-size: 0.6rem; flex-shrink: 0; margin-top: 5px; font-style: normal; }
+
+/* Ordered list */
+.post-body ol { padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.post-body ol li { font-family: var(--font-body); font-size: 1rem; font-style: italic; color: var(--text-mid); line-height: 1.75; font-weight: 300; }
+.post-body ol li::marker { color: var(--forest3); }
+
+/* Blockquote */
+blockquote {
+  border-left: 2px solid var(--forest2);
+  margin: 2rem 0; padding: 1.25rem 1.5rem;
+  background: var(--forest-faint);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+}
+blockquote p, blockquote {
+  font-family: var(--font-body); font-size: 1.15rem; font-style: italic;
+  color: var(--forest4); line-height: 1.7; margin-bottom: 0;
+}
+
+/* Divider */
+.post-divider {
+  text-align: center; color: var(--text-dim);
+  font-size: 0.7rem; letter-spacing: 0.3em; margin: 2.5rem 0;
+}
+
+/* Note box */
+.post-note {
+  background: var(--bg-card); border: 1px solid var(--border-mid);
+  border-left: 3px solid var(--wine2); border-radius: var(--radius-card);
+  padding: 1.1rem 1.3rem;
+  font-family: var(--font-body); font-size: 0.95rem; font-style: italic;
+  color: var(--text-mid); line-height: 1.7; margin-top: 1.5rem;
+}
+.post-note strong {
+  color: var(--wine2); font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em;
+  font-family: var(--font-body); font-weight: 500; display: block; margin-bottom: 4px;
+}
+
+
+/* --- POST FOOTER BAND --- */
+.post-footer-band {
+  background: var(--bg-raised);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 2rem var(--section-pad-h);
+}
+.post-footer-inner { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 860px) {
+  .post-header { padding: 2.5rem var(--section-pad-h) 2rem; }
+  .post-body { padding: 2.5rem var(--section-pad-h) 2rem; }
+}
