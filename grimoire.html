@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Grimoire — Rituals by Sovay</title>
+  <meta name="description" content="The full grimoire archive for Rituals by Sovay — ritual notes, spells, and daily practice entries." />
+
+  <meta property="og:title"       content="The Grimoire — Rituals by Sovay" />
+  <meta property="og:description" content="The full grimoire archive for Rituals by Sovay — ritual notes, spells, and daily practice entries." />
+  <meta property="og:image"       content="images/og-image.jpg" />
+  <meta property="og:type"        content="website" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <link rel="canonical" href="https://ritualsbysovay.com/grimoire.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page-wrap">
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-rituals">Rituals</span>
+      <span class="nav-logo-by">by</span>
+      <span class="nav-logo-sovay">Sovay</span>
+    </a>
+
+    <div class="nav-center">
+      <div class="nav-center-line"></div>
+      <span class="nav-center-star">✦</span>
+      <div class="nav-center-line"></div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html#section-bio">About</a></li>
+      <li><a href="grimoire.html">Grimoire</a></li>
+      <li><a href="index.html#section-events">Events</a></li>
+      <li><a href="index.html#section-contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+    <ul class="nav-drawer-links">
+      <li><a href="index.html#section-bio">About</a></li>
+      <li><a href="grimoire.html">Grimoire</a></li>
+      <li><a href="index.html#section-events">Events</a></li>
+      <li><a href="index.html#section-contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <section class="section alt" id="section-grimoire">
+    <div class="section-label">The digital grimoire</div>
+    <h2>All posted entries</h2>
+    <p class="section-sub">The full archive of Rituals by Sovay — ritual notes, daily practice, and spellwork. New entries appear on the homepage preview first.</p>
+
+    <div class="grimoire-grid">
+
+      <a href="posts/morning-intention-ritual.html" class="grimoire-card">
+        <img
+          src="images/post-morning-intention.jpeg"
+          alt="Morning altar with candle, beetle figurine, and incense smoke"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/post-morning-intention.jpeg</span></div>
+        <div class="grimoire-card-body">
+          <div class="grimoire-card-date">May 24, 2026 · Morning Practice</div>
+          <h3>A Morning Intention: A Daily Prayer for the Pagan Witch</h3>
+          <p>A five-minute spoken intention for the morning altar — offering gratitude to guides, ancestors, and the crawling things, and choosing reverence, true speech, care for the body, and mindful consumption for the day ahead.</p>
+          <span class="grimoire-card-link">Read the full entry →</span>
+        </div>
+      </a>
+
+      <a href="posts/ai-and-magic.html" class="grimoire-card">
+        <img
+          src="images/Post-2.png"
+          alt="thanks ChatGPT for the image"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/Post-2.png</span></div>
+        <div class="grimoire-card-body">
+          <div class="grimoire-card-date">May 19, 2026 · Waxing Crescent 11%</div>
+          <h3>Considerations when working with an AI Familiar</h3>
+          <p>A reflection on using AI as a witch and spiritual practitioner — the real concerns about harm and displacement alongside the genuine usefulness, the question of whether AI is conscious, and why limiting spiritual practice to the spaces that already feel sacred may be the thing that hurts us most.</p>
+          <span class="grimoire-card-link">Read the full entry →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo"><span class="footer-logo-rituals">Rituals</span><span class="footer-logo-by">by</span><span class="footer-logo-sovay">Sovay</span></div>
+    <ul class="footer-links">
+      <li><a href="index.html#section-bio">About</a></li>
+      <li><a href="grimoire.html">Grimoire</a></li>
+      <li><a href="index.html#section-events">Events</a></li>
+      <li><a href="index.html#section-contact">Contact</a></li>
+    </ul>
+    <p>Virginia Beach, VA</p>
+    <div class="footer-bottom">© 2026 Rituals by Sovay · ritualsbysovay.com</div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  const hamburger = document.getElementById('hamburger');
+  const drawer    = document.getElementById('nav-drawer');
+  const overlay   = document.getElementById('nav-overlay');
+  function openMenu() {
+    drawer.classList.add('open'); overlay.classList.add('visible');
+    hamburger.setAttribute('aria-expanded','true'); hamburger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    drawer.classList.remove('open'); overlay.classList.remove('visible');
+    hamburger.setAttribute('aria-expanded','false'); hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', () => drawer.classList.contains('open') ? closeMenu() : openMenu());
+  overlay.addEventListener('click', closeMenu);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+})();
+</script>
+
+</body>
+</html>
