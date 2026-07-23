@@ -19,6 +19,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var saved = localStorage.getItem('sovay-theme');
+      if (saved === 'light') document.documentElement.classList.add('light');
+    })();
+  </script>
+
 </head>
 <body>
 <div class="page-wrap">
@@ -30,29 +37,34 @@
       <span class="nav-logo-sovay">Sovay</span>
     </a>
 
-    <div class="nav-center">
+ <!--   <div class="nav-center">
       <div class="nav-center-line"></div>
       <span class="nav-center-star">✦</span>
       <div class="nav-center-line"></div>
-    </div>
+    </div>.  -->
 
     <ul class="nav-links">
       <li><a href="index.html#section-bio">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="grimoire.html">Grimoire</a></li>
-      <li><a href="index.html#section-events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="index.html#section-contact">Contact</a></li>
     </ul>
 
-    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <div class="nav-right">
+      <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">🌙</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+    </div>
   </nav>
 
   <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
     <ul class="nav-drawer-links">
       <li><a href="index.html#section-bio">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="grimoire.html">Grimoire</a></li>
-      <li><a href="index.html#section-events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="index.html#section-contact">Contact</a></li>
     </ul>
   </div>
@@ -65,13 +77,58 @@
 
     <div class="grimoire-grid">
 
+      <a href="posts/hotel-room-witchcraft-v2.html" class="grimoire-card">
+        <img
+          src="images/Hotel.jpg"
+          alt="A small improvised altar set up in a hotel room"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/Hotel.jpg</span></div>
+        <div class="grimoire-card-body">
+          <div class="grimoire-card-date">July 15, 2026 · Offerings &amp; Gratitude</div>
+          <h3>Hotel Room Witchcraft</h3>
+          <p>On the road with none of my usual tools, I built an altar from what I had and went into the spirit space to give thanks — no asking, only offerings.</p>
+          <span class="grimoire-card-link">Read the full entry →</span>
+        </div>
+      </a>
+
+      <a href="posts/blue-moon-knot-spell.html" class="grimoire-card">
+        <img
+          src="images/Knot.jpg"
+          alt="Cord and knot magic materials laid out for a full moon ritual"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/Knot.jpg</span></div>
+        <div class="grimoire-card-body">
+          <div class="grimoire-card-date">May 31, 2026 · Full Moon Ritual</div>
+          <h3>Knot Magic Under the Blue Moon: A Ritual for Six</h3>
+          <p>The history of cord and knot magic, how to work with beads, and a full ritual outline for the May 2026 blue moon in Sagittarius — for a circle of six working outdoors.</p>
+          <span class="grimoire-card-link">Read the full entry →</span>
+        </div>
+      </a>
+
+      <a href="posts/the-fire-is-a-trick.html" class="grimoire-card">
+        <img
+          src="images/fire.png"
+          alt="A temple in a burning landscape, imagined from a shamanic journey"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/fire.png</span></div>
+        <div class="grimoire-card-body">
+          <div class="grimoire-card-date">May 28, 2026 · Shamanic Journey</div>
+          <h3>The Fire Is a Trick</h3>
+          <p>A shamanic journey into a world on fire — and what the guide inside the temple taught me about exhaustion, eternal firefighting, and the possibility of rest.</p>
+          <span class="grimoire-card-link">Read the full entry →</span>
+        </div>
+      </a>
+
       <a href="posts/morning-intention-ritual.html" class="grimoire-card">
         <img
-          src="images/post-morning-intention.jpeg"
+          src="images/morning.jpg"
           alt="Morning altar with candle, beetle figurine, and incense smoke"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
-        <div class="grimoire-card-placeholder" style="display:none;"><span>images/post-morning-intention.jpeg</span></div>
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/morning.jpg</span></div>
         <div class="grimoire-card-body">
           <div class="grimoire-card-date">May 24, 2026 · Morning Practice</div>
           <h3>A Morning Intention: A Daily Prayer for the Pagan Witch</h3>
@@ -102,8 +159,9 @@
     <div class="footer-logo"><span class="footer-logo-rituals">Rituals</span><span class="footer-logo-by">by</span><span class="footer-logo-sovay">Sovay</span></div>
     <ul class="footer-links">
       <li><a href="index.html#section-bio">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="grimoire.html">Grimoire</a></li>
-      <li><a href="index.html#section-events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="index.html#section-contact">Contact</a></li>
     </ul>
     <p>Virginia Beach, VA</p>
@@ -130,6 +188,17 @@
   hamburger.addEventListener('click', () => drawer.classList.contains('open') ? closeMenu() : openMenu());
   overlay.addEventListener('click', closeMenu);
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  function updateToggleIcon() {
+    themeToggle.textContent = document.documentElement.classList.contains('light') ? '🌑' : '🌙';
+  }
+  updateToggleIcon();
+  themeToggle.addEventListener('click', function() {
+    document.documentElement.classList.toggle('light');
+    localStorage.setItem('sovay-theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
+    updateToggleIcon();
+  });
 })();
 </script>
 

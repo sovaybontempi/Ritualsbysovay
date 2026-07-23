@@ -33,9 +33,9 @@ ritualsbysovay/
 
 ## Adding an event
 
-In `index.html`, find the `#section-events` section and duplicate an `.event-item` block. Update the month, day, name, time, location, description, and RSVP email link.
+Full event details live on `events.html`, not on the homepage. The homepage `#section-events` section is just a short teaser linking to that page.
 
-To show the "no upcoming events" placeholder instead: delete the `.event-item` blocks and uncomment the `.events-empty` div.
+In `events.html`, duplicate an `.event-detail-card` block inside `.events-detail-list`. Update the eyebrow (category/location), title, meta line, body paragraphs, and the action link(s) — mailto or an external URL. Add a `.event-detail-image` block at the top of the card if there's a photo, or leave it off for text-only events.
 
 ---
 

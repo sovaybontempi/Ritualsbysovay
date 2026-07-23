@@ -21,6 +21,13 @@
 
   <!-- Path goes up one level since posts live in /posts/ subfolder -->
   <link rel="stylesheet" href="../styles.css" />
+  <script>
+    (function() {
+      var saved = localStorage.getItem('sovay-theme');
+      if (saved === 'light') document.documentElement.classList.add('light');
+    })();
+  </script>
+
   <link rel="stylesheet" href="../post-styles.css" />
 </head>
 <body>
@@ -35,20 +42,25 @@
     <div class="nav-center"><div class="nav-center-line"></div><span class="nav-center-star">✦</span><div class="nav-center-line"></div></div>
     <ul class="nav-links">
       <li><a href="../index.html#section-bio">About</a></li>
+      <li><a href="../services.html">Services</a></li>
       <li><a href="../grimoire.html">Grimoire</a></li>
-      <li><a href="../index.html#section-events">Events</a></li>
+      <li><a href="../events.html">Events</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <div class="nav-right">
+      <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">🌙</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+    </div>
   </nav>
 
   <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
     <ul class="nav-drawer-links">
       <li><a href="../index.html#section-bio">About</a></li>
+      <li><a href="../services.html">Services</a></li>
       <li><a href="../grimoire.html">Grimoire</a></li>
-      <li><a href="../index.html#section-events">Events</a></li>
+      <li><a href="../events.html">Events</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
   </div>
@@ -169,8 +181,9 @@
     <div class="footer-logo"><span class="footer-logo-rituals">Rituals</span><span class="footer-logo-by">by</span><span class="footer-logo-sovay">Sovay</span></div>
     <ul class="footer-links">
       <li><a href="../index.html#section-bio">About</a></li>
+      <li><a href="../services.html">Services</a></li>
       <li><a href="../grimoire.html">Grimoire</a></li>
-      <li><a href="../index.html#section-events">Events</a></li>
+      <li><a href="../events.html">Events</a></li>
       <li><a href="../index.html#section-contact">Contact</a></li>
     </ul>
     <p>Virginia Beach, VA</p>
@@ -198,6 +211,17 @@
   hamburger.addEventListener('click', () => drawer.classList.contains('open') ? closeMenu() : openMenu());
   overlay.addEventListener('click', closeMenu);
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  function updateToggleIcon() {
+    themeToggle.textContent = document.documentElement.classList.contains('light') ? '🌑' : '🌙';
+  }
+  updateToggleIcon();
+  themeToggle.addEventListener('click', function() {
+    document.documentElement.classList.toggle('light');
+    localStorage.setItem('sovay-theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
+    updateToggleIcon();
+  });
 })();
 </script>
 

@@ -19,6 +19,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var saved = localStorage.getItem('sovay-theme');
+      // Default to dark — only switch to light if explicitly saved
+      if (saved === 'light') document.documentElement.classList.add('light');
+    })();
+  </script>
 </head>
 <body>
 <div class="page-wrap">
@@ -34,29 +41,34 @@
       <span class="nav-logo-sovay">Sovay</span>
     </a>
 
-    <div class="nav-center">
+    <!-- ><div class="nav-center">
       <div class="nav-center-line"></div>
       <span class="nav-center-star">✦</span>
       <div class="nav-center-line"></div>
-    </div>
+    </div>. -->
 
     <ul class="nav-links">
       <li><a href="#section-bio">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="grimoire.html">Grimoire</a></li>
-      <li><a href="#section-events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="#section-contact">Contact</a></li>
     </ul>
 
-    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">🌙</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
     <ul class="nav-drawer-links">
       <li><a href="#section-bio">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="grimoire.html">Grimoire</a></li>
-      <li><a href="#section-events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="#section-contact">Contact</a></li>
     </ul>
   </div>
@@ -85,7 +97,7 @@
         </div>
         <p class="hero-sub">The world needs more magick, and its up to us to create it</p>
         <div class="hero-btns">
-          <a href="grimoire.html" class="btn-primary">Enter the grimoire</a>
+          <a href="events.html" class="btn-primary">Events</a>
           <a href="#section-contact"  class="btn-ghost">Contact Sovay</a>
         </div>
       </div>
@@ -94,7 +106,7 @@
 <!--        <!-- REPLACE: src and alt -->
 <!--        <img
           src="images/hero.jpeg"
-          alt="Sovay — modern witch and ritual practitioner"
+          alt=""
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
         <div class="img-placeholder" style="display:none;">
@@ -199,6 +211,36 @@
 
 
   <!-- ============================================================
+       SERVICES TEASER
+       Full service details live on their own page (services.html).
+       ============================================================ -->
+  <section class="section alt" id="section-services">
+    <div class="section-label">Work with Sovay</div>
+    <h2>Services &amp; <em>Offerings</em></h2>
+    <p class="section-sub">Spellwork, tarot, custom rituals, and spirit support — rates, process, and how to book.</p>
+
+    <div class="section-actions" style="text-align: center;">
+      <a href="services.html" class="btn-primary">See services &amp; offerings</a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EVENTS TEASER
+       Full event details now live on their own page (events.html).
+       ============================================================ -->
+  <section class="section" id="section-events">
+    <div class="section-label">Upcoming</div>
+    <h2>Events &amp; <em>Gatherings</em></h2>
+    <p class="section-sub">Retreats, workshops, and local gatherings — some hosted by Sovay, some simply loved and recommended.</p>
+
+    <div class="section-actions" style="text-align: center;">
+      <a href="events.html" class="btn-primary">See all events &amp; gatherings</a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        DIGITAL GRIMOIRE
        Blog-style card grid. Each card links to a full post page.
        Duplicate a .grimoire-card to add a new entry.
@@ -211,32 +253,32 @@
 
     <div class="grimoire-grid">
 
-      <a href="posts/morning-intention-ritual.html" class="grimoire-card">
+      <a href="posts/hotel-room-witchcraft-v2.html" class="grimoire-card">
         <img
-          src="images/post-morning-intention.jpeg"
-          alt="Morning altar with candle, beetle figurine, and incense smoke"
+          src="images/Hotel.jpg"
+          alt="A small improvised altar set up in a hotel room"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
-        <div class="grimoire-card-placeholder" style="display:none;"><span>images/post-morning-intention.jpeg</span></div>
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/Hotel.jpg</span></div>
         <div class="grimoire-card-body">
-          <div class="grimoire-card-date">May 24, 2026 · Morning Practice</div>
-          <h3>A Morning Intention: A Daily Prayer for the Pagan Witch</h3>
-          <p>A five-minute spoken intention for the morning altar — offering gratitude to guides, ancestors, and the crawling things, and choosing reverence, true speech, care for the body, and mindful consumption for the day ahead.</p>
+          <div class="grimoire-card-date">July 15, 2026 · Offerings &amp; Gratitude</div>
+          <h3>Hotel Room Witchcraft</h3>
+          <p>On the road with none of my usual tools, I built an altar from what I had and went into the spirit space to give thanks — no asking, only offerings.</p>
           <span class="grimoire-card-link">Read the full entry →</span>
         </div>
       </a>
 
-      <a href="posts/ai-and-magic.html" class="grimoire-card">
+      <a href="posts/blue-moon-knot-spell.html" class="grimoire-card">
         <img
-          src="images/Post-2.png"
-          alt="thanks ChatGPT for the image"
+          src="images/Knot.jpg"
+          alt="Cord and knot magic materials laid out for a full moon ritual"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
-        <div class="grimoire-card-placeholder" style="display:none;"><span>images/Post-2.png</span></div>
+        <div class="grimoire-card-placeholder" style="display:none;"><span>images/Knot.jpg</span></div>
         <div class="grimoire-card-body">
-          <div class="grimoire-card-date">May 19, 2026 · Waxing Crescent 11%</div>
-          <h3>Considerations when working with an AI Familiar</h3>
-          <p>A reflection on using AI as a witch and spiritual practitioner — the real concerns about harm and displacement alongside the genuine usefulness, the question of whether AI is conscious, and why limiting spiritual practice to the spaces that already feel sacred may be the thing that hurts us most.</p>
+          <div class="grimoire-card-date">May 31, 2026 · Full Moon Ritual</div>
+          <h3>Knot Magic Under the Blue Moon: A Ritual for Six</h3>
+          <p>The history of cord and knot magic, how to work with beads, and a full ritual outline for the May 2026 blue moon in Sagittarius — for a circle of six working outdoors.</p>
           <span class="grimoire-card-link">Read the full entry →</span>
         </div>
       </a>
@@ -245,58 +287,6 @@
 
     <div class="section-actions" style="margin-top: 2rem; text-align: center;">
       <a href="grimoire.html" class="btn-primary">Browse the full grimoire</a>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       EVENTS
-       Simple upcoming events list. Duplicate .event-item to add events.
-       Remove the .events-empty div once real events are added.
-       ============================================================ -->
-  <section class="section" id="section-events">
-    <div class="section-label">Upcoming</div>
-    <h2>Events &amp; <em>Gatherings</em></h2>
-    <p class="section-sub">In-person workings, seasonal gatherings, and collaborative rituals. All events are held in the Virginia Beach area unless noted.</p>
-
-    <div class="events-list">
-
-      <!-- REPLACE: duplicate this block to add events.
-           Remove .events-empty below once real events exist. -->
-      <div class="event-item">
-        <div class="event-date">
-          <div class="event-month">Jun</div>
-          <div class="event-day">21</div>
-        </div>
-        <div class="event-details">
-          <div class="event-name">REPLACE: Event or gathering name</div>
-          <!-- REPLACE: time, location, brief description -->
-          <div class="event-meta">REPLACE: Time · REPLACE: Location</div>
-          <div class="event-desc">REPLACE: One sentence about what this gathering is and who it's for.</div>
-        </div>
-        <!-- REPLACE: href and label — or remove if no link needed -->
-        <a href="mailto:sovay@ritualsbysovay.com?subject=REPLACE: Event name" class="event-rsvp">RSVP →</a>
-      </div>
-
-      <div class="event-item">
-        <div class="event-date">
-          <div class="event-month">Jul</div>
-          <div class="event-day">31</div>
-        </div>
-        <div class="event-details">
-          <div class="event-name">REPLACE: Event or gathering name</div>
-          <div class="event-meta">REPLACE: Time · REPLACE: Location</div>
-          <div class="event-desc">REPLACE: One sentence about what this gathering is and who it's for.</div>
-        </div>
-        <a href="mailto:ritualsbysovay.@gmail.com?subject=REPLACE: Event name" class="event-rsvp">RSVP →</a>
-      </div>
-
-      <!-- Placeholder shown when no events are scheduled — REMOVE once events exist -->
-      <!-- <div class="events-empty">
-        <span>✦</span>
-        <p>No upcoming events at this time. Check back at the next moon cycle.</p>
-      </div> -->
-
     </div>
   </section>
 
@@ -335,8 +325,9 @@
 
     <ul class="footer-links">
       <li><a href="#section-bio">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="grimoire.html">Grimoire</a></li>
-      <li><a href="#section-events">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="#section-contact">Contact</a></li>
     </ul>
 
@@ -368,6 +359,18 @@
   hamburger.addEventListener('click', () => drawer.classList.contains('open') ? closeMenu() : openMenu());
   overlay.addEventListener('click', closeMenu);
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  function updateToggleIcon() {
+    themeToggle.textContent = document.documentElement.classList.contains('light') ? '🌑' : '🌙';
+  }
+  updateToggleIcon();
+  themeToggle.addEventListener('click', function() {
+    document.documentElement.classList.toggle('light');
+    localStorage.setItem('sovay-theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
+    updateToggleIcon();
+  });
 })();
 </script>
 

@@ -7,6 +7,7 @@
   background: var(--bg);
   border-bottom: 1px solid var(--border-mid);
   padding: 3.5rem var(--section-pad-h) 2.5rem;
+  transition: background 0.3s;
 }
 .post-header-inner { max-width: 760px; }
 
@@ -51,12 +52,12 @@
 
 
 /* --- POST BODY --- */
-.post-body { padding: 4rem var(--section-pad-h) 3rem; }
+.post-body { padding: 4rem var(--section-pad-h) 3rem; background: var(--bg); transition: background 0.3s; }
 .post-body-inner { max-width: 680px; }
 
 .post-body p {
-  font-family: var(--font-body); font-size: 1.12rem; font-style: italic;
-  color: var(--text-mid); line-height: 1.95; margin-bottom: 1.5rem; font-weight: 300;
+  font-family: var(--font-body); font-size: 1.12rem; font-style: normal;
+  color: var(--text-body); line-height: 1.95; margin-bottom: 1.5rem; font-weight: 400;
 }
 
 .post-body h2 {
@@ -74,8 +75,8 @@
 .materials-list { list-style: none; padding: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .materials-list li {
   display: flex; align-items: flex-start; gap: 0.75rem;
-  font-family: var(--font-body); font-size: 1rem; font-style: italic;
-  color: var(--text-mid); line-height: 1.65; font-weight: 300;
+  font-family: var(--font-body); font-size: 1rem; font-style: normal;
+  color: var(--text-body); line-height: 1.65; font-weight: 400;
   padding: 0.6rem 0.9rem;
   background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-card);
 }
@@ -83,10 +84,10 @@
 
 /* Ordered list */
 .post-body ol { padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
-.post-body ol li { font-family: var(--font-body); font-size: 1rem; font-style: italic; color: var(--text-mid); line-height: 1.75; font-weight: 300; }
+.post-body ol li { font-family: var(--font-body); font-size: 1rem; font-style: normal; color: var(--text-body); line-height: 1.75; font-weight: 400; }
 .post-body ol li::marker { color: var(--forest3); }
 
-/* Blockquote */
+/* Blockquote — stays italic intentionally */
 blockquote {
   border-left: 2px solid var(--forest2);
   margin: 2rem 0; padding: 1.25rem 1.5rem;
@@ -109,8 +110,8 @@ blockquote p, blockquote {
   background: var(--bg-card); border: 1px solid var(--border-mid);
   border-left: 3px solid var(--wine2); border-radius: var(--radius-card);
   padding: 1.1rem 1.3rem;
-  font-family: var(--font-body); font-size: 0.95rem; font-style: italic;
-  color: var(--text-mid); line-height: 1.7; margin-top: 1.5rem;
+  font-family: var(--font-body); font-size: 0.95rem; font-style: normal;
+  color: var(--text-body); line-height: 1.7; margin-top: 1.5rem;
 }
 .post-note strong {
   color: var(--wine2); font-style: normal; font-size: 0.7rem; letter-spacing: 0.12em;
@@ -123,6 +124,7 @@ blockquote p, blockquote {
   background: var(--bg-raised);
   border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
   padding: 2rem var(--section-pad-h);
+  transition: background 0.3s;
 }
 .post-footer-inner { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 
