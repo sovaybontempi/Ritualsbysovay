@@ -269,7 +269,7 @@ a { color: inherit; text-decoration: none; }
 .hdiv-dot-green  { width: 4px; height: 4px; border-radius: 50%; background: var(--forest2); flex-shrink: 0; }
 
 .hero-sub {
-  font-family: var(--font-body); font-size: 1.12rem; font-style: normal;
+  font-family: var(--font-body); font-size: 1.34rem; font-style: normal;
   color: var(--text-body); line-height: 1.9; margin-bottom: 2.25rem;
   font-weight: 400; max-width: 420px;
 }
@@ -350,7 +350,7 @@ a { color: inherit; text-decoration: none; }
 }
 .mission-band-icon { color: var(--forest2); font-size: 1.4rem; flex-shrink: 0; opacity: 0.7; }
 .mission-band p {
-  font-family: var(--font-body); font-size: 1.1rem; font-style: italic;
+  font-family: var(--font-body); font-size: 1.32rem; font-style: italic;
   color: var(--text-mid); line-height: 1.65;
 }
 
@@ -378,7 +378,7 @@ a { color: inherit; text-decoration: none; }
 .section h2 em { font-family: var(--font-body); font-style: italic; color: var(--gold); }
 
 .section-sub {
-  font-family: var(--font-body); color: var(--text-body); font-size: 1.05rem;
+  font-family: var(--font-body); color: var(--text-body); font-size: 1.26rem;
   font-style: normal; font-weight: 400; max-width: 560px; line-height: 1.85; margin-bottom: 2.75rem;
 }
 
@@ -414,7 +414,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold); margin-bottom: 1.75rem; line-height: 1.55;
 }
 .bio-body {
-  font-family: var(--font-body); font-size: 1.05rem; color: var(--text-body);
+  font-family: var(--font-body); font-size: 1.26rem; color: var(--text-body);
   font-style: normal; font-weight: 400; line-height: 1.9; margin-bottom: 1.25rem; max-width: 540px;
 }
 
@@ -423,7 +423,7 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: flex-start; gap: 8px;
   background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-card);
   padding: 0.75rem 0.9rem;
-  font-family: var(--font-body); font-size: 0.88rem; font-style: normal;
+  font-family: var(--font-body); font-size: 1.06rem; font-style: normal;
   color: var(--text-body); font-weight: 400; line-height: 1.4;
 }
 .credential-mark { color: var(--forest3); flex-shrink: 0; margin-top: 1px; }
@@ -462,7 +462,7 @@ a { color: inherit; text-decoration: none; }
 .grimoire-card-body { padding: 1.25rem 1.35rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
 .grimoire-card-date { font-family: var(--font-body); font-size: 0.7rem; font-style: italic; color: var(--forest4); letter-spacing: 0.08em; }
 .grimoire-card h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; color: var(--text); line-height: 1.3; }
-.grimoire-card p { font-family: var(--font-body); font-size: 0.95rem; font-style: normal; color: var(--text-body); line-height: 1.75; font-weight: 400; flex: 1; }
+.grimoire-card p { font-family: var(--font-body); font-size: 1.14rem; font-style: normal; color: var(--text-body); line-height: 1.75; font-weight: 400; flex: 1; }
 .grimoire-card-link {
   font-family: var(--font-body); font-size: 0.76rem; font-style: italic;
   color: var(--wine2); margin-top: 0.5rem; transition: color 0.2s;
@@ -491,7 +491,7 @@ a { color: inherit; text-decoration: none; }
 
 .event-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--text); margin-bottom: 4px; }
 .event-meta { font-family: var(--font-body); font-size: 0.74rem; font-style: italic; color: var(--forest4); letter-spacing: 0.05em; margin-bottom: 5px; }
-.event-desc { font-family: var(--font-body); font-size: 0.9rem; font-style: normal; color: var(--text-body); font-weight: 400; line-height: 1.6; }
+.event-desc { font-family: var(--font-body); font-size: 1.08rem; font-style: normal; color: var(--text-body); font-weight: 400; line-height: 1.6; }
 
 .event-rsvp {
   font-family: var(--font-body); font-size: 0.76rem; font-style: italic; color: var(--wine2);
@@ -522,10 +522,10 @@ html.light .join-section {
 .join-logo { font-family: var(--font-display); font-weight: 400; font-size: 2.4rem; color: var(--text); display: block; margin-bottom: 1.25rem; letter-spacing: 0.02em; }
 .join-logo em { font-family: var(--font-body); font-style: italic; color: var(--wine2); }
 
-.join-section p { font-family: var(--font-body); font-size: 1.05rem; font-style: normal; color: var(--text-body); font-weight: 400; line-height: 1.9; margin-bottom: 2rem; max-width: 520px; }
+.join-section p { font-family: var(--font-body); font-size: 1.26rem; font-style: normal; color: var(--text-body); font-weight: 400; line-height: 1.9; margin-bottom: 2rem; max-width: 520px; }
 
 .contact-note { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.5rem; }
-.contact-note p { font-family: var(--font-body); font-size: 0.85rem; font-style: normal; color: var(--text-dim); font-weight: 400; line-height: 1.65; margin-bottom: 0; }
+.contact-note p { font-family: var(--font-body); font-size: 1.02rem; font-style: normal; color: var(--text-dim); font-weight: 400; line-height: 1.65; margin-bottom: 0; }
 
 
 /* =============================================================
@@ -601,7 +601,7 @@ html.light .join-section {
 }
 
 .event-detail-card p {
-  font-family: var(--font-body); font-size: 1.02rem; font-style: normal;
+  font-family: var(--font-body); font-size: 1.22rem; font-style: normal;
   color: var(--text-body); font-weight: 400; line-height: 1.85; margin-bottom: 1.1rem;
 }
 .event-detail-card p:last-of-type { margin-bottom: 0; }
@@ -612,7 +612,7 @@ html.light .join-section {
   background: var(--bg-raised); border: 1px solid var(--border-mid);
   border-left: 3px solid var(--forest2); border-radius: var(--radius-card);
   padding: 1rem 1.25rem; margin-top: 1.5rem;
-  font-family: var(--font-body); font-size: 0.92rem; font-style: normal;
+  font-family: var(--font-body); font-size: 1.1rem; font-style: normal;
   color: var(--text-body); line-height: 1.7;
 }
 .event-detail-note strong {
